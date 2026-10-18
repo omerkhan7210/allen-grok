@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <style>
+    @font-face {
+      font-family: "Fraunces";
+      src: url("../fonts/Fraunces.ttf") format("truetype");
+      font-weight: 100 900;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "Manrope";
+      src: url("../fonts/Manrope.ttf") format("truetype");
+      font-weight: 100 900;
+      font-style: normal;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      background: #1C241C;
+    }
+    .card {
+      width: 1200px;
+      height: 630px;
+      display: grid;
+      grid-template-columns: 520px 6px 1fr;
+      background: #1C241C;
+    }
+    .panel {
+      background: #F4F1EA;
+      color: #1C241C;
+      padding: 0 52px 0 58px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .kicker {
+      font-family: "Manrope", sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #A65D3F;
+    }
+    h1 {
+      margin-top: 22px;
+      font-family: "Fraunces", "Times New Roman", serif;
+      font-weight: 560;
+      font-size: 86px;
+      line-height: 0.86;
+      letter-spacing: -0.035em;
+      font-variation-settings: "opsz" 144, "SOFT" 30, "WONK" 0, "wght" 560;
+      color: #1C241C;
+    }
+    h1 span { display: block; }
+    .rule {
+      width: 52px;
+      height: 3px;
+      margin: 28px 0 22px;
+      background: #A65D3F;
+    }
+    .sub {
+      font-family: "Manrope", sans-serif;
+      font-weight: 650;
+      font-size: 15px;
+      letter-spacing: 0.145em;
+      text-transform: uppercase;
+      color: #2F5D50;
+      line-height: 1.35;
+    }
+    .bar { background: #A65D3F; }
+    .photo {
+      background:
+        url("../../artifacts/imagine_images/e7947290-9f21-47ef-a246-55d37ab1e36d.jpg")
+        58% 46% / cover no-repeat;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <aside class="panel">
+      <p class="kicker">Delta Real Estate</p>
+      <h1><span>Allen</span><span>Schwabe</span></h1>
+      <div class="rule"></div>
+      <p class="sub">Delta & Tsawwassen Realtor</p>
+    </aside>
+    <div class="bar" aria-hidden="true"></div>
+    <div class="photo"></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Allen Schwabe | Delta & Tsawwassen REALTOR®",
+      "hasCanvas": false,
+      "bodyTextLen": 3437,
+      "bodyTextHash": "f1212ad3e0c3557124fd1fcbb43344bd67542005faf38582aae8067ab9c6fefa",
+      "bodyTextPrefix": "Allen Schwabe SUTTON SEAFAIR · DELTA The place How it works Home",
+      "horizontalOverflow": false,
+      "consoleErrors": [
+        "A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n- Date formatting in a user's locale which doesn't match the server.\n- External changing data without sending a snapshot of it along with the HTML.\n- Invalid HTML tag nesting.\n\nIt can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n\n%s%s https://react.dev/link/hydration-mismatch \n\n  ...\n    <MatchImpl routeId=\"/\">\n      <MatchView router={{...}} match={{id:\"//\",ssr:true, ...}}>\n        <CatchBoundary getResetKey={function getResetKey} errorComponent={function AppErrorComponent} ...>\n          <MatchInnerImpl match={{id:\"//\",ssr:true, ...}}>\n            <Lazy>\n              <Home>\n                <div className=\"min-h-scre...\">\n                  <header>\n                  <main id=\"top\">\n                    <section>\n                    <section>\n                    <section>\n                    <section>\n                    <section>\n                    <section className=\"mx-auto mt...\" id=\"talk\">\n                      <div className=\"grid overf...\">\n                        <img>\n                        <div className=\"p-6 md:p-10\">\n                          <h2>\n                          <p>\n                          <form className=\"mt-8 space...\" onSubmit={function onSubmit}>\n                            <div className=\"grid gap-4...\">\n                              <label className=\"block text-sm\">\n                                <input\n                                  required={true}\n                                  name=\"name\"\n                                  className=\"mt-1 w-full border border-line bg-paper px-3 py-3 outline-none focus:bord...\"\n-                                 style={{caret-color:\"transparent\"}}\n                                >\n                              <label className=\"block text-sm\">\n                                <input\n                                  name=\"phone\"\n                                  className=\"mt-1 w-full border border-line bg-paper px-3 py-3 outline-none focus:bord...\"\n-                                 style={{caret-color:\"transparent\"}}\n                                >\n                            <label className=\"block text-sm\">\n                              <input\n                                required={true}\n                                type=\"email\"\n                                name=\"email\"\n                                className=\"mt-1 w-full border border-line bg-paper px-3 py-3 outline-none focus:border...\"\n-                               style={{caret-color:\"transparent\"}}\n                              >\n                            <label>\n                            <label className=\"block text-sm\">\n                              <textarea\n                                name=\"note\"\n                                rows={4}\n                                className=\"mt-1 w-full border border-line bg-paper px-3 py-3 outline-none focus:border...\"\n-                               style={{caret-color:\"transparent\"}}\n                              >\n                            ...\n                  ...\n"
+      ],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Allen Schwabe | Delta & Tsawwassen REALTOR®",
+      "hasCanvas": false,
+      "bodyTextLen": 3394,
+      "bodyTextHash": "0759b552950980ee63bdf0bf8ad124f01f8085a08d557f528733a2c62256f041",
+      "bodyTextPrefix": "Allen Schwabe SUTTON SEAFAIR · DELTA DELTA · TSAWWASSEN · LADNER",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}

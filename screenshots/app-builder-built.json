@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Allen Schwabe | Delta & Tsawwassen REALTOR®",
+      "hasCanvas": false,
+      "bodyTextLen": 3437,
+      "bodyTextHash": "f1212ad3e0c3557124fd1fcbb43344bd67542005faf38582aae8067ab9c6fefa",
+      "bodyTextPrefix": "Allen Schwabe SUTTON SEAFAIR · DELTA The place How it works Home",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Allen Schwabe | Delta & Tsawwassen REALTOR®",
+      "hasCanvas": false,
+      "bodyTextLen": 3394,
+      "bodyTextHash": "0759b552950980ee63bdf0bf8ad124f01f8085a08d557f528733a2c62256f041",
+      "bodyTextPrefix": "Allen Schwabe SUTTON SEAFAIR · DELTA DELTA · TSAWWASSEN · LADNER",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}

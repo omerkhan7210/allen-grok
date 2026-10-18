@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Allen Schwabe | Delta & Tsawwassen REALTOR® | Sutton Group Seafair Realty</title>
+  <meta name="description" content="Allen Schwabe is your trusted Delta and Tsawwassen real estate expert. Lifelong local knowledge, strong negotiation, and dedicated service for buyers and sellers in Delta, BC.">
+  <meta name="keywords" content="Delta realtor, Tsawwassen real estate, homes for sale Delta BC, Ladner realtor, Beach Grove homes, Allen Schwabe, Sutton Seafair">
+  <meta name="author" content="Allen Schwabe">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1a365d;
+      --primary-dark: #0f2744;
+      --accent: #c9a227;
+      --accent-hover: #b8911f;
+      --text: #1a202c;
+      --text-light: #4a5568;
+      --bg: #ffffff;
+      --bg-alt: #f7fafc;
+      --border: #e2e8f0;
+      --success: #276749;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      background: var(--bg);
+    }
+    h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 700; line-height: 1.2; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; height: auto; display: block; }
+    .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    /* Header */
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,0.97);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
+    .header-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 72px;
+    }
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem; font-weight: 700; color: var(--primary);
+    }
+    .logo span { color: var(--accent); }
+    nav { display: flex; gap: 32px; align-items: center; }
+    nav a { font-size: 0.95rem; font-weight: 500; color: var(--text-light); transition: color 0.2s; }
+    nav a:hover { color: var(--primary); }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 12px 24px; border-radius: 6px; font-weight: 600; font-size: 0.95rem;
+      transition: all 0.2s; cursor: pointer; border: none;
+    }
+    .btn-primary { background: var(--primary); color: white; }
+    .btn-primary:hover { background: var(--primary-dark); }
+    .btn-accent { background: var(--accent); color: var(--primary-dark); }
+    .btn-accent:hover { background: var(--accent-hover); }
+    .btn-outline { background: transparent; border: 2px solid white; color: white; }
+    .btn-outline:hover { background: white; color: var(--primary); }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+      color: white;
+      padding: 100px 0 90px;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><path fill="%23ffffff" fill-opacity="0.03" d="M0 400 Q300 300 600 400 T1200 350 V600 H0 Z"/></svg>') no-repeat bottom;
+      background-size: cover;
+    }
+    .hero-content { position: relative; max-width: 700px; }
+    .hero-badge {
+      display: inline-block; background: rgba(201,162,39,0.2);
+      color: var(--accent); padding: 6px 14px; border-radius: 50px;
+      font-size: 0.85rem; font-weight: 600; margin-bottom: 20px;
+      letter-spacing: 0.5px;
+    }
+    .hero h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); margin-bottom: 20px; }
+    .hero p { font-size: 1.15rem; opacity: 0.9; margin-bottom: 32px; max-width: 540px; }
+    .hero-ctas { display: flex; flex-wrap: wrap; gap: 16px; }
+    .hero-stats {
+      display: flex; gap: 40px; margin-top: 48px; padding-top: 32px;
+      border-top: 1px solid rgba(255,255,255,0.15);
+    }
+    .stat strong { display: block; font-size: 1.8rem; font-family: 'Playfair Display', serif; }
+    .stat span { font-size: 0.9rem; opacity: 0.8; }
+
+    /* Sections */
+    section { padding: 80px 0; }
+    .section-header { text-align: center; max-width: 640px; margin: 0 auto 48px; }
+    .section-header h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); color: var(--primary); margin-bottom: 12px; }
+    .section-header p { color: var(--text-light); font-size: 1.05rem; }
+
+    /* About */
+    .about-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+    }
+    .about-image {
+      background: var(--bg-alt); border-radius: 12px; height: 420px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--text-light); font-size: 0.95rem; border: 1px solid var(--border);
+    }
+    .about-content h2 { font-size: 2rem; color: var(--primary); margin-bottom: 16px; }
+    .about-content p { color: var(--text-light); margin-bottom: 16px; }
+    .about-list { list-style: none; margin: 24px 0; }
+    .about-list li {
+      display: flex; align-items: flex-start; gap: 12px;
+      margin-bottom: 12px; font-size: 0.98rem;
+    }
+    .about-list li::before {
+      content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0;
+    }
+
+    /* Areas */
+    .areas { background: var(--bg-alt); }
+    .areas-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px;
+    }
+    .area-card {
+      background: white; border-radius: 10px; padding: 28px;
+      border: 1px solid var(--border); transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .area-card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.06); }
+    .area-card h3 { font-size: 1.25rem; color: var(--primary); margin-bottom: 8px; }
+    .area-card p { font-size: 0.95rem; color: var(--text-light); }
+
+    /* Listings */
+    .listings-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px;
+    }
+    .listing-card {
+      background: white; border-radius: 10px; overflow: hidden;
+      border: 1px solid var(--border); transition: box-shadow 0.2s;
+    }
+    .listing-card:hover { box-shadow: 0 12px 28px rgba(0,0,0,0.08); }
+    .listing-img {
+      height: 200px; background: linear-gradient(135deg, #e2e8f0, #cbd5e0);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--text-light); font-size: 0.9rem;
+    }
+    .listing-body { padding: 20px; }
+    .listing-price { font-size: 1.3rem; font-weight: 700; color: var(--primary); margin-bottom: 6px; }
+    .listing-address { font-size: 0.95rem; color: var(--text-light); margin-bottom: 12px; }
+    .listing-meta { display: flex; gap: 16px; font-size: 0.85rem; color: var(--text-light); }
+
+    /* Process */
+    .process-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
+    }
+    .process-col h3 {
+      font-size: 1.4rem; color: var(--primary); margin-bottom: 24px;
+      padding-bottom: 12px; border-bottom: 2px solid var(--accent);
+    }
+    .step { display: flex; gap: 16px; margin-bottom: 24px; }
+    .step-num {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: var(--primary); color: white;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 0.9rem; flex-shrink: 0;
+    }
+    .step h4 { font-size: 1.05rem; margin-bottom: 4px; }
+    .step p { font-size: 0.92rem; color: var(--text-light); }
+
+    /* Trust */
+    .trust { background: var(--primary); color: white; text-align: center; }
+    .trust h2 { color: white; margin-bottom: 12px; }
+    .trust p { opacity: 0.9; max-width: 560px; margin: 0 auto 32px; }
+    .trust-badges {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 32px;
+    }
+    .badge {
+      background: rgba(255,255,255,0.1); padding: 16px 28px; border-radius: 8px;
+      font-size: 0.95rem;
+    }
+
+    /* Contact */
+    .contact-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
+    }
+    .contact-info h2 { font-size: 2rem; color: var(--primary); margin-bottom: 16px; }
+    .contact-info p { color: var(--text-light); margin-bottom: 24px; }
+    .contact-details { list-style: none; }
+    .contact-details li {
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 14px; font-size: 1rem;
+    }
+    .contact-details strong { color: var(--primary); min-width: 70px; }
+    .contact-form {
+      background: var(--bg-alt); padding: 32px; border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .form-group { margin-bottom: 18px; }
+    .form-group label {
+      display: block; font-size: 0.9rem; font-weight: 500;
+      margin-bottom: 6px; color: var(--text);
+    }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%; padding: 12px 14px; border: 1px solid var(--border);
+      border-radius: 6px; font-size: 0.95rem; font-family: inherit;
+      background: white; transition: border-color 0.2s;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      outline: none; border-color: var(--primary);
+    }
+    .form-group textarea { min-height: 110px; resize: vertical; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+    /* Footer */
+    footer {
+      background: var(--primary-dark); color: rgba(255,255,255,0.85);
+      padding: 48px 0 24px; font-size: 0.9rem;
+    }
+    .footer-grid {
+      display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px;
+      margin-bottom: 40px;
+    }
+    .footer-brand .logo { color: white; margin-bottom: 12px; }
+    .footer-brand p { opacity: 0.75; max-width: 280px; }
+    .footer-col h4 {
+      color: white; font-family: 'Inter', sans-serif;
+      font-size: 0.95rem; font-weight: 600; margin-bottom: 16px;
+    }
+    .footer-col a { display: block; opacity: 0.75; margin-bottom: 8px; transition: opacity 0.2s; }
+    .footer-col a:hover { opacity: 1; }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 24px; text-align: center; opacity: 0.6; font-size: 0.85rem;
+    }
+
+    /* Mobile */
+    .mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; }
+    @media (max-width: 900px) {
+      .about-grid, .process-grid, .contact-grid, .footer-grid { grid-template-columns: 1fr; }
+      .hero-stats { flex-wrap: wrap; gap: 24px; }
+      nav { display: none; }
+      .mobile-menu-btn { display: block; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container header-inner">
+      <a href="#" class="logo">Allen <span>Schwabe</span></a>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#areas">Areas</a>
+        <a href="#listings">Listings</a>
+        <a href="#process">How I Help</a>
+        <a href="#contact" class="btn btn-primary" style="padding: 10px 20px;">Contact</a>
+      </nav>
+      <button class="mobile-menu-btn" aria-label="Menu">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">DELTA & TSAWWASSEN REAL ESTATE EXPERT</div>
+        <h1>Your Trusted Local Guide to Buying & Selling in Delta</h1>
+        <p>Lifelong resident. Strong negotiator. Dedicated to getting you the best result — whether you're buying your first home, upsizing, or selling in Tsawwassen, Ladner, or North Delta.</p>
+        <div class="hero-ctas">
+          <a href="#contact" class="btn btn-accent">Get a Free Home Valuation</a>
+          <a href="#listings" class="btn btn-outline">View Current Listings</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <strong>12+</strong>
+            <span>Years with Sutton Seafair</span>
+          </div>
+          <div class="stat">
+            <strong>Lifelong</strong>
+            <span>Delta Resident</span>
+          </div>
+          <div class="stat">
+            <strong>Local</strong>
+            <span>Market Expertise</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image">
+          [Professional Photo of Allen Schwabe]
+        </div>
+        <div class="about-content">
+          <h2>Meet Allen Schwabe</h2>
+          <p>I'm a Licensed REALTOR® with Sutton Group Seafair Realty and a lifelong resident of the Delta area. My deep roots in this community mean I don't just know the market numbers — I know the neighbourhoods, the schools, the lifestyle, and what makes each area special.</p>
+          <p>Whether you're buying or selling, I focus on listening first, then using strong negotiation skills and local insight to help you achieve the best possible outcome.</p>
+          <ul class="about-list">
+            <li>Licensed REALTOR® with Sutton Group Seafair Realty</li>
+            <li>Serving Tsawwassen, Ladner, North Delta & surrounding areas</li>
+            <li>Clear communication and client-first approach</li>
+            <li>Entrepreneurial background with 25+ years in business leadership</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary">Let's Talk About Your Goals</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Areas -->
+  <section id="areas" class="areas">
+    <div class="container">
+      <div class="section-header">
+        <h2>Areas I Specialize In</h2>
+        <p>Deep local knowledge across South Delta and beyond</p>
+      </div>
+      <div class="areas-grid">
+        <div class="area-card">
+          <h3>Tsawwassen</h3>
+          <p>Oceanfront living, Beach Grove, Boundary Bay, and family-friendly neighbourhoods with excellent schools and community feel.</p>
+        </div>
+        <div class="area-card">
+          <h3>Ladner</h3>
+          <p>Charming village atmosphere, waterfront homes, and convenient access to amenities — ideal for families and downsizers.</p>
+        </div>
+        <div class="area-card">
+          <h3>North Delta</h3>
+          <p>Great value, established neighbourhoods, and strong community — perfect for growing families and first-time buyers.</p>
+        </div>
+        <div class="area-card">
+          <h3>Surrounding Areas</h3>
+          <p>Richmond, South Surrey, and other Lower Mainland communities when your search expands.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Listings -->
+  <section id="listings">
+    <div class="container">
+      <div class="section-header">
+        <h2>Featured Opportunities</h2>
+        <p>A selection of current properties in Delta and nearby communities</p>
+      </div>
+      <div class="listings-grid">
+        <article class="listing-card">
+          <div class="listing-img">Property Photo</div>
+          <div class="listing-body">
+            <div class="listing-price">$2,169,000</div>
+            <div class="listing-address">5845 Whitcomb Place, Beach Grove</div>
+            <div class="listing-meta">
+              <span>3 Beds</span>
+              <span>4 Baths</span>
+              <span>2,554 sqft</span>
+            </div>
+          </div>
+        </article>
+        <article class="listing-card">
+          <div class="listing-img">Property Photo</div>
+          <div class="listing-body">
+            <div class="listing-price">$849,900</div>
+            <div class="listing-address">410 - 5011 Springs Blvd, Tsawwassen</div>
+            <div class="listing-meta">
+              <span>2 Beds</span>
+              <span>2 Baths</span>
+              <span>1,001 sqft</span>
+            </div>
+          </div>
+        </article>
+        <article class="listing-card">
+          <div class="listing-img">Property Photo</div>
+          <div class="listing-body">
+            <div class="listing-price">$1,799,000</div>
+            <div class="listing-address">163 49 Street, Pebble Hill</div>
+            <div class="listing-meta">
+              <span>3 Beds</span>
+              <span>3 Baths</span>
+              <span>2,776 sqft</span>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div style="text-align: center; margin-top: 40px;">
+        <a href="#contact" class="btn btn-primary">Request Full Listing Access</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section id="process" class="areas">
+    <div class="container">
+      <div class="section-header">
+        <h2>How I Help You Succeed</h2>
+        <p>Clear process. Strong advocacy. Local expertise at every step.</p>
+      </div>
+      <div class="process-grid">
+        <div class="process-col">
+          <h3>For Buyers</h3>
+          <div class="step">
+            <div class="step-num">1</div>
+            <div>
+              <h4>Understand Your Goals</h4>
+              <p>We discuss lifestyle, budget, must-haves, and timeline so the search is focused and efficient.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div>
+              <h4>Targeted Search & Showings</h4>
+              <p>I leverage local knowledge and market data to find the right homes and arrange private viewings.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div>
+              <h4>Negotiate & Close Strong</h4>
+              <p>I advocate hard for your interests and guide you through conditions, inspections, and closing.</p>
+            </div>
+          </div>
+        </div>
+        <div class="process-col">
+          <h3>For Sellers</h3>
+          <div class="step">
+            <div class="step-num">1</div>
+            <div>
+              <h4>Pricing & Preparation</h4>
+              <p>Accurate market analysis, staging guidance, and a clear plan to maximize your home's appeal.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div>
+              <h4>Strategic Marketing</h4>
+              <p>Professional exposure through MLS, targeted marketing, and my local network.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div>
+              <h4>Negotiate Top Dollar</h4>
+              <p>Skilled negotiation to secure the strongest offer and smooth path to closing.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust -->
+  <section class="trust">
+    <div class="container">
+      <h2>Why Work With Allen</h2>
+      <p>Local roots. Professional service. A genuine commitment to your success in one of BC's most desirable communities.</p>
+      <div class="trust-badges">
+        <div class="badge">Sutton Group Seafair Realty</div>
+        <div class="badge">Licensed REALTOR®</div>
+        <div class="badge">Lifelong Delta Resident</div>
+        <div class="badge">Client-Focused Service</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h2>Let's Start the Conversation</h2>
+          <p>Whether you're ready to buy, sell, or just want a clear picture of your home's value, I'm here to help — with no pressure and straightforward advice.</p>
+          <ul class="contact-details">
+            <li><strong>Phone</strong> 604-644-5664</li>
+            <li><strong>Email</strong> aschwabe@sutton.com</li>
+            <li><strong>Office</strong> 1625 – 56th Street, Delta, BC V4L 2B2</li>
+            <li><strong>Brokerage</strong> Sutton Group Seafair Realty</li>
+          </ul>
+        </div>
+        <div class="contact-form">
+          <form>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required placeholder="Your name">
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="Your phone">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required placeholder="Your email">
+            </div>
+            <div class="form-group">
+              <label for="interest">I'm interested in</label>
+              <select id="interest" name="interest">
+                <option value="valuation">Free Home Valuation</option>
+                <option value="buying">Buying a Home</option>
+                <option value="selling">Selling a Home</option>
+                <option value="both">Buying & Selling</option>
+                <option value="other">Just Exploring</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message (optional)</label>
+              <textarea id="message" name="message" placeholder="Tell me a bit about your plans..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">Allen <span style="color: var(--accent);">Schwabe</span></div>
+          <p>Licensed REALTOR® helping buyers and sellers across Delta, Tsawwassen, Ladner, and the Lower Mainland.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="#about">About Allen</a>
+          <a href="#areas">Areas Served</a>
+          <a href="#listings">Listings</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="tel:6046445664">604-644-5664</a>
+          <a href="mailto:aschwabe@sutton.com">aschwabe@sutton.com</a>
+          <a href="#">Sutton Group Seafair Realty</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Allen Schwabe | Sutton Group Seafair Realty. All rights reserved.</p>
+        <p style="margin-top: 8px; font-size: 0.8rem;">The data relating to real estate on this website comes in part from the MLS® Reciprocity program of the Greater Vancouver REALTORS® (GVR) and/or the Fraser Valley Real Estate Board (FVREB). This representation is based in whole or part on data generated by the GVR or FVREB which assumes no responsibility for its accuracy.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
